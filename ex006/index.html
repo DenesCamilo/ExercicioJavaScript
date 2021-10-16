@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 24);
+            color: white;
+            width: 200px;
+            height: 200px;
+           line-height: 200px;
+           text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <!--https://developer.mozilla.org/en-US/docs/Web/Events-->
+    <div id="area">
+        interaja...
+    </div>
+
+    <script>
+        var a = document.querySelector('div#area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('dbclick',clickduplo)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+
+        function clicar(){
+            a.innerHTML = 'clicou'
+            a.style.background = 'blue'
+        }
+        function clickduplo(){
+            a.innerHTML =  'double'
+            a.style.background = 'black'
+        }
+        function entrar(){
+            a.innerHTML = 'entrou'
+        }
+        function sair(){
+            a.innerHTML = 'sair'
+            a.style.background = 'green'
+        }
+    </script>
+    
+</body>
+</html>
